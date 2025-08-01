@@ -10,11 +10,11 @@ library PriceConverter {
     
     function getPrice() internal view returns(uint256) {
         //Address of The contract of chainlink to get the Current Price.
-        //0x694AA1769357215DE4FAC081bf1f309aDC325306 ETH/USD Sepolia testnet address
+        //0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF ETH/USD zkSync Sepolia testnet address
 
         //API of the Contract.
         AggregatorV3Interface priceFeed = AggregatorV3Interface(
-            0x694AA1769357215DE4FAC081bf1f309aDC325306
+            0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF
             );
         
         (, int256 answer, , , ) = priceFeed.latestRoundData(); //Price of ETH in terms of USD
@@ -32,7 +32,7 @@ library PriceConverter {
     } // To convert the msg.value in terms of dollars using getPrice().
 
     function getVersion() internal view returns(uint256) {
-      return AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306).version();
+      return AggregatorV3Interface(0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF).version();
      } //to test The interface 
       
 }
