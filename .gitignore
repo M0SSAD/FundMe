@@ -1,0 +1,13 @@
+# Ignore build artifacts
+out/
+cache/
+artifacts/
+
+# Ignore environment files
+.env
+
+# Ignore node_modules if using npm/yarn
+node_modules/
+
+# Ignore Mac system files
+.DS_Store
