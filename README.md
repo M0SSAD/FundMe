@@ -36,11 +36,6 @@ script/                 # Deployment and interaction scripts
 ├── HelperConfig.s.sol # Network configuration helper
 └── interactions.s.sol # Funding and withdrawal scripts
 
-lib/                    # External dependencies
-├── chainlink-brownie-contracts/  # Chainlink interfaces
-├── forge-std/         # Foundry standard library
-└── foundry-devops/    # DevOps utilities
-
 foundry.toml           # Foundry configuration and remappings
 Makefile               # Automated build and deployment tasks
 ```
