@@ -5,9 +5,19 @@ artifacts/
 
 # Ignore environment files
 .env
+!/broadcast
+/broadcast/*/31337
+/boadcast/**/dry-run
+
+# Docs
+docs/
 
 # Ignore node_modules if using npm/yarn
 node_modules/
 
 # Ignore Mac system files
 .DS_Store
+zkout/
+
+broadcast/
+lib/
