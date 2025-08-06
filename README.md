@@ -37,6 +37,7 @@ script/                 # Deployment and interaction scripts
 ├── HelperConfig.s.sol # Network configuration helper
 └── interactions.s.sol # Funding and withdrawal scripts
 
+<<<<<<< HEAD
 frontend/               # AI-generated web interface
 ├── index.html         # Main frontend interface
 ├── index.js           # Web3 integration logic
@@ -49,6 +50,8 @@ lib/                    # External dependencies
 ├── forge-std/         # Foundry standard library
 └── foundry-devops/    # DevOps utilities
 
+=======
+>>>>>>> 08ea90a48d748bccd9db72ed17e885cd39a1c935
 foundry.toml           # Foundry configuration and remappings
 Makefile               # Automated build and deployment tasks
 ```
