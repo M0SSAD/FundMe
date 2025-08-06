@@ -50,7 +50,6 @@ lib/                    # External dependencies
 └── foundry-devops/    # DevOps utilities
 
 =======
->>>>>>> 08ea90a48d748bccd9db72ed17e885cd39a1c935
 foundry.toml           # Foundry configuration and remappings
 Makefile               # Automated build and deployment tasks
 ```
