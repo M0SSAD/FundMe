@@ -12,6 +12,7 @@ FundMe is a decentralized crowdfunding smart contract built with Solidity and th
 - **Gas-Optimized Operations**: Features both standard and gas-efficient withdrawal methods (`withdraw()` and `cheaperWithdraw()`)
 - **Receive and Fallback Functions**: Handles direct ETH transfers to the contract address by routing them to the fund() function
 - **Multi-Network Support**: Configured for deployment on local Anvil, Ethereum Sepolia, and zkSync Sepolia testnets
+- **AI-Generated Frontend**: Complete web interface built with HTML, CSS, and JavaScript for contract interaction
 - **Comprehensive Testing**: Includes unit and integration tests using Foundry's testing utilities and cheatcodes
 - **Fork Testing**: Supports testing against live networks using Foundry's forking capabilities
 - **Automated Scripts**: Provides deployment and interaction scripts for streamlined contract management
@@ -35,6 +36,13 @@ script/                 # Deployment and interaction scripts
 ├── DeployFundMe.s.sol # Contract deployment script
 ├── HelperConfig.s.sol # Network configuration helper
 └── interactions.s.sol # Funding and withdrawal scripts
+
+frontend/               # AI-generated web interface
+├── index.html         # Main frontend interface
+├── index.js           # Web3 integration logic
+├── constants.js       # Contract configuration
+├── ethers-6.7.esm.min.js # Ethers.js library
+└── connect.png        # UI assets
 
 lib/                    # External dependencies
 ├── chainlink-brownie-contracts/  # Chainlink interfaces
@@ -67,6 +75,92 @@ A library providing ETH to USD conversion utilities:
 - **getPrice()**: Fetches current ETH price from Chainlink price feed
 - **getConversionRate()**: Converts ETH amount to USD equivalent
 - **Integration**: Works with AggregatorV3Interface for reliable price data
+
+## Frontend Interface
+
+This project includes a **fully AI-generated frontend** built with HTML, CSS, and JavaScript to interact with the deployed FundMe smart contract. The frontend provides a user-friendly interface for testing and demonstrating the contract's functionality.
+
+### Frontend Features
+
+- **Contract Interaction**: Direct integration with MetaMask for seamless blockchain interactions
+- **Funding Interface**: Simple form to fund the contract with ETH amount validation
+- **Real-time Updates**: Live display of contract balance and funding status
+- **Withdrawal Controls**: Owner-only withdrawal functionality with proper access control
+- **Network Support**: Compatible with local Anvil network and Ethereum testnets
+- **Responsive Design**: Mobile-friendly interface with modern CSS styling
+- **Error Handling**: Comprehensive error messages and transaction status feedback
+
+### Frontend Structure
+
+```
+frontend/
+├── index.html          # Main interface with contract interaction forms
+├── index.js            # JavaScript for Web3 integration and contract calls
+├── constants.js        # Contract ABI and address configuration
+├── ethers-6.7.esm.min.js # Ethers.js library for blockchain interaction
+├── connect.png         # UI assets and images
+└── README.md           # Frontend-specific documentation
+```
+
+### Key Frontend Components
+
+- **Connection Management**: Automatic MetaMask detection and wallet connection
+- **Contract Integration**: Direct calls to FundMe contract functions (fund, withdraw, getters)
+- **Balance Display**: Real-time contract balance and funder information
+- **Transaction Feedback**: Success/error notifications for all contract interactions
+- **Owner Controls**: Special interface elements for contract owner operations
+
+### Running the Frontend
+
+1. **Start local blockchain**:
+   ```bash
+   anvil
+   ```
+
+2. **Deploy the contract**:
+   ```bash
+   make deploy
+   ```
+
+3. **Update contract configuration**:
+   - Copy the deployed contract address
+   - Update `contractAddress` in `frontend/constants.js`
+
+4. **Serve the frontend**:
+   ```bash
+   cd frontend
+   # Use any local server
+   python -m http.server 8080
+   # Or use live-server, http-server, or VS Code Live Server
+   ```
+
+5. **Connect MetaMask**:
+   - Add Anvil network (Chain ID: 31337, RPC: http://127.0.0.1:8545)
+   - Import an Anvil account using the private key
+   - Navigate to `http://localhost:8080` to access the interface
+
+### AI-Generated Frontend
+
+**Important Note**: The entire frontend (HTML, CSS, and JavaScript) was **100% generated using AI** to demonstrate rapid prototyping capabilities and showcase how AI can accelerate full-stack dApp development. This includes:
+
+- **Responsive UI Design**: Complete styling and layout generated through AI prompts
+- **Web3 Integration**: All blockchain interaction code written by AI using Ethers.js
+- **Error Handling**: Comprehensive exception handling and user feedback systems
+- **Modern JavaScript**: ES6+ features and async/await patterns implemented by AI
+- **UX/UI Patterns**: Industry-standard interface patterns and user experience flows
+- **Contract Integration**: Automatic ABI usage and contract method calling
+
+This demonstrates the potential of AI-assisted development in creating functional, professional-grade frontends for blockchain applications without manual coding.
+
+### Frontend Learning Outcomes
+
+- **Web3 Integration**: Understanding how to connect frontend applications to smart contracts
+- **MetaMask Integration**: Implementing wallet connectivity and transaction signing
+- **Contract ABI Usage**: Utilizing contract ABIs for frontend-blockchain communication
+- **Ethers.js Library**: Working with modern Web3 libraries for blockchain interaction
+- **Error Handling**: Managing blockchain transaction errors and user feedback
+- **Responsive Design**: Creating mobile-friendly dApp interfaces
+- **AI-Assisted Development**: Leveraging AI tools for rapid frontend prototyping and development
 
 ## Testing Framework
 
@@ -305,9 +399,12 @@ This project demonstrates mastery of:
 - **Development Workflow**: Building, testing, and deploying with modern Foundry tooling and cheatcodes
 - **Gas Optimization**: Efficient coding patterns, storage optimization, and multiple withdrawal implementations
 - **Script Automation**: Deployment and interaction automation with error handling
+- **Frontend Development**: AI-assisted web interface creation using HTML, CSS, JavaScript, and Ethers.js
+- **Full-Stack dApp Development**: Complete blockchain application from smart contracts to user interface
 - **Project Organization**: Professional project structure, comprehensive documentation, and dependency management
 - **Network Configuration**: Multi-network deployment strategies and environment-specific configurations
 - **Debugging Skills**: Troubleshooting common Foundry and Solidity development issues
+- **AI-Assisted Development**: Leveraging AI tools for rapid prototyping and accelerated development workflows
 
 ## Security Considerations
 
