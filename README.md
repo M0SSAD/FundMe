@@ -37,7 +37,6 @@ script/                 # Deployment and interaction scripts
 ├── HelperConfig.s.sol # Network configuration helper
 └── interactions.s.sol # Funding and withdrawal scripts
 
-<<<<<<< HEAD
 frontend/               # AI-generated web interface
 ├── index.html         # Main frontend interface
 ├── index.js           # Web3 integration logic
